@@ -1,0 +1,29 @@
+# ─────────────────────────────────────────────────────────────
+#  Copy this to terraform.tfvars and fill in your values.
+#  NEVER commit terraform.tfvars to GitHub (it's in .gitignore)
+# ─────────────────────────────────────────────────────────────
+
+aws_region = "ap-south-1"
+
+# Paste content of your ~/.ssh/id_rsa.pub here
+ec2_public_key = "ssh-rsa AAAA..."
+
+# RDS password (min 8 chars, no special chars that break URLs)
+db_password = "YourStrongDBPassword123"
+
+# Will be filled AFTER RDS is created (run terraform apply first)
+# Format: postgresql://postgres:PASSWORD@RDS_ENDPOINT:5432/mrmpg
+database_url = "postgresql://postgres:YourStrongDBPassword123@mrm-postgres.xxxx.ap-south-1.rds.amazonaws.com:5432/mrmpg"
+
+# Long random string for JWT
+jwt_secret = "replace_with_very_long_random_string_min_64_chars"
+
+# Gmail SMTP (use App Password, not account password)
+email_user = "your@gmail.com"
+email_pass = "your-16-char-app-password"
+email_from = "your@gmail.com"
+
+company_name = "MRM PG"
+
+# Your GitHub repo URL
+github_repo_url = "https://github.com/YOUR_USERNAME/mrm-project.git"

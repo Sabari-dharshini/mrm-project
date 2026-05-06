@@ -34,7 +34,9 @@ mrmpg-backend/uploads/*
 !mrmpg-backend/uploads/.gitkeep
 
 # Prisma
-mrmpg-backend/prisma/migrations/
+mrmpg-backend/prisma/migrations/*
+!mrmpg-backend/prisma/migrations/.gitkeep
+
 
 # OS
 .DS_Store
